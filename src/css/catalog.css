@@ -1,0 +1,14 @@
+ .borderFlex {
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            box-shadow: 8px 3px black;
+
+        }
+
+        #mainCatalog {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
