@@ -19,9 +19,14 @@ categoria(catalogProdutos, categorias);
 
 //Pesquisa
 const formPesquisa = document.getElementById('formPesquisa');
+const campoPesquisa = document.getElementById('categoria');
 
 formPesquisa.addEventListener('submit', (event) => {
     efetuarPesquisa(event, catalogProdutos, mainCatalog);
+});
+
+campoPesquisa.addEventListener('input', () => {
+    efetuarPesquisa(null, catalogProdutos, mainCatalog);
 });
 
 

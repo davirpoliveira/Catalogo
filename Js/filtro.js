@@ -2,7 +2,9 @@ import { catalogo } from './catalogo.js';
 
 export function efetuarPesquisa(event, catalogProdutos, mainCatalog) {
 
-    event.preventDefault();
+    if (event) {
+        event.preventDefault();
+    }
 
     const filtro = document
         .getElementById('categoria')
