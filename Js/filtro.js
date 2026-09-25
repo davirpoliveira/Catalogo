@@ -1,3 +1,9 @@
+//
+// 
+// Função responsável pelo filtro
+
+
+
 import { catalogo } from './catalogo.js';
 
 export function efetuarPesquisa(event, catalogProdutos, mainCatalog) {

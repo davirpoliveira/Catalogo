@@ -1,3 +1,5 @@
+//Responsável por fazer o formato do catalogo
+
 export function catalogo(produto, mainCatalog) {
 
     const boxProduto = document.createElement('div');

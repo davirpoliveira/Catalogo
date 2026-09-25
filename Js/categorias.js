@@ -1,3 +1,7 @@
+//Arquivo js responsável pela categorias, 
+// gerando automaticamente 
+// na pagina caso tenha um novo e não repetindo tipo
+
 export function categoria(produtos, categorias) {
 
     const categoriasUnicas = [];
@@ -12,3 +16,4 @@ export function categoria(produtos, categorias) {
 
     categorias.textContent = categoriasUnicas.join(' | ');
 }
+

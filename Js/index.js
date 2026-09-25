@@ -1,3 +1,6 @@
+//Nó de todas os arquvios feitos
+
+
 import { catalogProdutos } from './produtos.js';
 import { catalogo } from './catalogo.js';
 import { efetuarPesquisa } from './filtro.js';
