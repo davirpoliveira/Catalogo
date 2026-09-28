@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -11,28 +11,31 @@
 <body>
     <header>
         <section id="mainHeader" class="flex">
-            <h1>Bem Vindo a Tectoon</h1>
+            <h1>Tectoon</h1>
             <h3>Uma Loja Que Você Precisa</h3>
         </section>
-        <section id="midHeader" class="flex">
-            <h3>Possuimos as seguintes categorias de produtos,
-                caso não queira navegar pelo nosso catalogo</h3>
-
-            <h4 id="categorias"></h4>
-        </section>
-        <section id="lowHeader" class="flex">
-            <form id="formPesquisa">
-                <label>Pesquise aqui</label>
-                <input type="search" id="categoria" name="NomeCategoria">
-                <input type="submit" value="Pesquisar">
-            </form>
-        </section>
     </header>
-    <main>
-        <section id="mainCatalog">
+    <div class="layout">
+        <aside id="sidebar">
+            <section id="lowHeader" class="flex">
+                <h3>Pesquisa</h3>
+                <form id="formPesquisa">
+                    <label for="categoria">Pesquise aqui</label>
+                    <input type="search" id="categoria" name="NomeCategoria" placeholder="Ex: Dell, PlayStation...">
+                    <input type="submit" value="Pesquisar">
+                </form>
+            </section>
+            <section id="midHeader" class="flex">
+                <h3>Categorias, clique para filtrar</h3>
+                <div id="categorias"></div>
+            </section>
+        </aside>
+        <main>
+            <section id="mainCatalog">
 
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
     <script type="module" src="Js/index.js"></script>
 </body>
 
