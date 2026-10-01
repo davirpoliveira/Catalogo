@@ -1,0 +1,113 @@
+ /* Fundo e fundamento */
+
+ * {
+     box-sizing: border-box;
+ }
+
+ body {
+     margin: 0;
+     padding: 0 1rem 3rem;
+     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+     background-color: #f0f2f5;
+     color: #1a1a1a;
+     line-height: 1.5;
+ }
+
+ header,
+ .layout {
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+
+ /*///////////////////////////////////////////////*/
+
+ /*Header*/
+
+#mainHeader {
+    margin: 1rem 0 0;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    background-color: #11547e;
+    background-image: linear-gradient(135deg, #11547e, #1a7ab0);
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#mainHeader h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2.2rem;
+}
+
+#mainHeader h3 {
+    margin: 0;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+/* Meio do header */
+#midHeader {
+    padding: 1.25rem 1rem;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+#midHeader h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#midHeader h4 {
+    margin: 0;
+}
+
+#categorias {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* Barra de Pesquisa*/
+
+#formPesquisa {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+#formPesquisa label {
+    font-weight: 600;
+}
+
+#formPesquisa input[type="search"] {
+    flex: 1 1 220px;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#formPesquisa input[type="submit"] {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #11547e;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#formPesquisa input[type="submit"]:hover {
+    background-color: #0d4263;
+}
+#midHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza form + categorias */
+}

@@ -14,5 +14,4 @@ const catalogProdutos = [
     ['Xbox 360', '3.2GHz, Memoria 512MB RAM', 'VideoGame | Microsoft', 'src/assets/xbox2.webp', 749.90],
     ['Xbox One', '1.75GHz, Memoria 8GB DDR3 RAM', 'VideoGame | Microsoft', 'src/assets/xboxone.webp', 999.90]
 ];
-
 export { catalogProdutos };
