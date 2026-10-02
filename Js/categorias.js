@@ -21,17 +21,17 @@ export function categoria(produtos, categorias) {
 
     // Adiciona as categorias na página
 
-    // 1. limpa o que tinha antes
+    // limpa o que tinha antes
     categorias.innerHTML = ''; 
 
-    // 2. cria os dois grupos com a mesma função, lado a lado via CSS
+    // Cria dois grupos e deixa eles lado a lado no css
     categorias.append(
-        criarGrupoSelect('Tipo: ', 'selectTipo', [...tipos].sort(), 'Todos os tipos'),
-        criarGrupoSelect('Marca: ', 'selectMarca', [...marcas].sort(), 'Todas as marcas')
+        criarGrupoSelect('Tipos: ', 'selectTipo', [...tipos].sort(), 'Todos os tipos'),
+        criarGrupoSelect('Marcas: ', 'selectMarca', [...marcas].sort(), 'Todas as marcas')
     );
 }
 
-// Função auxiliar: cria um div.filtro-grupo com label + select.
+// Faz com que crie os select dinamicamente sem ter que escrever as opções.
 // Evita repetir o mesmo código para Tipo e Marca.
 function criarGrupoSelect(textoLabel, selectId, opcoes, textoTodos) {
     const grupo = document.createElement('div');

@@ -1,102 +1,89 @@
-/* Produtos */
-
-#mainCatalog {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1.5rem;
+main {
+  max-width: 1400px;
+  margin: 1.5rem auto 0;
+  padding: 0 1rem 3rem;
 }
 
 .borderFlex {
-    flex: 1 1 260px;
-    max-width: 320px;
-    min-width: 240px;
     display: flex;
     flex-direction: column;
-    background: #fff;
-    border: 1px solid #e0e0e0;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #c17474;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border: 1px solid black;
+    max-width: 320px;
+    min-width: 240px;
+    flex: 1 1 260px;
     border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+    overflow: hidden;
+    
 }
+
 .borderFlex:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Imagem do produto */
 
-
+/*Imagem do produto*/
 .img-wrap {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.9rem;
-    background: linear-gradient(180deg, #f8fafc, #e9eef3);
-    overflow: hidden;
+    background: #fff;
 }
 
 .imgProduto {
-    display: block;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
-    filter: saturate(1.05) contrast(1.03);
     transition: transform 0.25s ease;
 }
+
+
+
+
 .borderFlex:hover .imgProduto {
     transform: scale(1.06);
 }
 
+.preco {
 
-/* Estilização dos conteúdos da array */
-
-.borderFlex h2 {
-    margin: 0.9rem 1rem 0.3rem;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 10px;
+    margin-top: auto ;
 }
 
-.borderFlex p {
-    margin: 0.25rem 1rem;
-    font-size: 0.95rem;
-    color: #444;
-}
-
-.borderFlex p.descricao {
-    flex-grow: 1;
-}
-
-.borderFlex p.categoria {
-    font-size: 0.85rem;
-    color: #666;
-    font-style: italic;
-}
-
-.borderFlex p.preco {
-    margin: 0.7rem 1rem 1rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--azul);
-}
-main {
-  max-width: 1200px;
-  margin: 1.5rem auto 0; /* 1.5rem de respiro do header */
-}
-
-/*Responsividade para celular */
-
-/* Celular: 1 card por linha, centralizado */
-@media (max-width: 600px) {
-  #mainCatalog {
+#mainCatalog {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-  }
+    align-items: stretch;
+    gap: 20px;
+    background-color: #f0f2f5;
+}
 
-  .borderFlex {
-    flex: 1 1 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
+.borderFlex h2,
+.borderFlex .descricao,
+.borderFlex .categoria {
+    margin: 8px 0;
+}
+
+#categorias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0.5rem;
 }
