@@ -1,13 +1,13 @@
-//Nó de todas os arquvios feitos
+// Arquivo principal: liga todos os outros módulos
 
-
+//Liga todos os outros arquivos a esse
 import { catalogProdutos } from './produtos.js';
 import { catalogo } from './catalogo.js';
 import { efetuarPesquisa } from './filtro.js';
 import { categoria } from './categorias.js';
 
+// Referências aos containers principais
 const mainCatalog = document.getElementById('mainCatalog');
-const submit = document.getElementById('Submit');
 const categorias = document.getElementById('categorias');
 
 
@@ -30,6 +30,17 @@ formPesquisa.addEventListener('submit', (event) => {
 
 campoPesquisa.addEventListener('input', () => {
     efetuarPesquisa(null, catalogProdutos, mainCatalog);
+});
+
+// Selects de Tipo e Marca criados em categorias.js
+// Mesma ação para os dois, então um loop evita repetir o listener
+['selectTipo', 'selectMarca'].forEach((id) => {
+    const select = document.getElementById(id);
+    if (select) {
+        select.addEventListener('change', () => {
+            efetuarPesquisa(null, catalogProdutos, mainCatalog);
+        });
+    }
 });
 
 

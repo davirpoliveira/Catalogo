@@ -1,4 +1,5 @@
-//Responsável por fazer o formato do catalogo
+// Responsável por montar o card de cada produto no catálogo.
+// Recebe produto no formato [nome, descrição, categoria, imagem, preço].
 
 export function catalogo(produto, mainCatalog) {
 

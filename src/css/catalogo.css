@@ -36,7 +36,6 @@
     justify-content: center;
     padding: 0.9rem;
     background: linear-gradient(180deg, #f8fafc, #e9eef3);
-    border-bottom: 1px solid #ffffff;
     overflow: hidden;
 }
 
@@ -80,11 +79,24 @@
     margin: 0.7rem 1rem 1rem;
     font-size: 1.1rem;
     font-weight: 700;
-    color: #11547e;
-    
-
+    color: var(--azul);
 }
 main {
   max-width: 1200px;
   margin: 1.5rem auto 0; /* 1.5rem de respiro do header */
+}
+
+/*Responsividade para celular */
+
+/* Celular: 1 card por linha, centralizado */
+@media (max-width: 600px) {
+  #mainCatalog {
+    justify-content: center;
+  }
+
+  .borderFlex {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
 }

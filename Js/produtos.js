@@ -1,4 +1,5 @@
-// Definição da constante do array
+// Lista de produtos do catálogo.
+// Formato de cada item: [nome, descrição, "Tipo | Marca", imagem, preço]
 
 const catalogProdutos = [
     ['Notebook Dell', 'Notebook Dell i7 14" 500GB SSD', 'Notebook | Dell', 'src/assets/dell.webp', 7889.8],

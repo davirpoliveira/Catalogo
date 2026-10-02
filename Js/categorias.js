@@ -1,40 +1,62 @@
-//Arquivo js responsável pela categorias, 
-// gerando automaticamente 
-// na pagina caso tenha um novo e não repetindo tipo
+// Arquivo JS responsável pelas categorias,
+// gerando automaticamente na página
+// caso tenha uma nova e sem repetir tipos
 
 export function categoria(produtos, categorias) {
 
-    //Os sets servem para meio que separar a 
-    //categoria encontrada no produto[2] em dois
-    //Marca e tipo.
-    
+    // Os Sets separam a categoria do produto[2] em dois:
+    // tipo e marca. Set evita valores repetidos.
+
     const tipos = new Set();
     const marcas = new Set();
 
-    //ForEach para mapear a array sem repitir 
-    //mesma palavras 
+    // Percorre o array para mapear os valores
+    // sem repetir as mesmas palavras
 
     produtos.forEach((produto) => {
         const [tipo, marca] = produto[2].split('|').map(s => s.trim());
         tipos.add(tipo);
         if (marca) marcas.add(marca);
     });
-    
-    //Parte de acressentar as categorias na página
+
+    // Adiciona as categorias na página
 
     // 1. limpa o que tinha antes
     categorias.innerHTML = ''; 
 
-    // 2. cria a primeira linha
-    const linhaTipos = document.createElement('div');
-    linhaTipos.setAttribute = ('class', 'categoriasTipos');
-    linhaTipos.textContent = 'Tipos: ' + [...tipos].join(' | ');
+    // 2. cria os dois grupos com a mesma função, lado a lado via CSS
+    categorias.append(
+        criarGrupoSelect('Tipo: ', 'selectTipo', [...tipos].sort(), 'Todos os tipos'),
+        criarGrupoSelect('Marca: ', 'selectMarca', [...marcas].sort(), 'Todas as marcas')
+    );
+}
 
-    // 3. cria a segunda linha
-    const linhaMarcas = document.createElement('div');
-        linhaMarcas.setAttribute = ('class', 'categoriasMarcas');
-    linhaMarcas.textContent = 'Marcas: ' + [...marcas].join(' | ');
+// Função auxiliar: cria um div.filtro-grupo com label + select.
+// Evita repetir o mesmo código para Tipo e Marca.
+function criarGrupoSelect(textoLabel, selectId, opcoes, textoTodos) {
+    const grupo = document.createElement('div');
+    grupo.setAttribute('class', 'filtro-grupo');
 
-    // 4. coloca as duas dentro do container
-    categorias.append(linhaTipos, linhaMarcas);
+    const label = document.createElement('label');
+    label.setAttribute('for', selectId);
+    label.textContent = textoLabel;
+
+    const select = document.createElement('select');
+    select.id = selectId;
+    select.name = selectId;
+
+    const optTodos = document.createElement('option');
+    optTodos.value = '';
+    optTodos.textContent = textoTodos;
+    select.append(optTodos);
+
+    opcoes.forEach((opcao) => {
+        const opt = document.createElement('option');
+        opt.value = opcao;
+        opt.textContent = opcao;
+        select.append(opt);
+    });
+
+    grupo.append(label, select);
+    return grupo;
 }
